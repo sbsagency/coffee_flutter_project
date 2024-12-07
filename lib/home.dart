@@ -22,9 +22,9 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   CircleAvatar(
                     backgroundColor: Colors.orangeAccent[100],
-                    //backgroundImage: AssetImage("assets/images/bigfood.png"),
+                    backgroundImage: AssetImage("assets/images/fatim.jpg"),
                     radius: 22,
-                    child: const Text("Photo",style: TextStyle(fontSize: 14.7, color: Colors.white),),
+                    //child: const Text("Photo",style: TextStyle(fontSize: 14.7, color: Colors.white),),
                   ),
                   Row(
                     children: [
@@ -252,7 +252,7 @@ Widget menuRowSection = Container(
 );
 Widget menuPriceSection = Container(
   padding: const EdgeInsets.all(15),
-  height: 250,
+  height: 400,
   child: GridView.count(
     crossAxisCount: 2,
     mainAxisSpacing: 25,
@@ -262,7 +262,7 @@ Widget menuPriceSection = Container(
         padding: const EdgeInsets.only(top: 15),
         decoration: BoxDecoration(
             border: Border.all(
-              color: Colors.red, width: 3,
+              color: Colors.orangeAccent, width: 3,
             ),
             //color: Colors.white38,
             borderRadius: BorderRadius.circular(70)
@@ -292,7 +292,7 @@ Widget menuPriceSection = Container(
                 left: 75,
                 child: IconButton(
                     style: ButtonStyle(
-                        backgroundColor: WidgetStatePropertyAll(Colors.pink)
+                        backgroundColor: WidgetStatePropertyAll(Colors.orangeAccent)
                     ),
                     onPressed: null,
                     icon: Icon(Icons.add, size: 35,color: Colors.white,)
@@ -305,7 +305,7 @@ Widget menuPriceSection = Container(
         padding: const EdgeInsets.only(top: 15),
         decoration: BoxDecoration(
             border: Border.all(
-              color: Colors.red, width: 3,
+              color: Colors.orangeAccent, width: 3,
             ),
             //color: Colors.white38,
             borderRadius: BorderRadius.circular(70)
@@ -335,7 +335,93 @@ Widget menuPriceSection = Container(
                 left: 75,
                 child: IconButton(
                     style: ButtonStyle(
-                        backgroundColor: WidgetStatePropertyAll(Colors.pink)
+                        backgroundColor: WidgetStatePropertyAll(Colors.orangeAccent)
+                    ),
+                    onPressed: null,
+                    icon: Icon(Icons.add, size: 35,color: Colors.white,)
+                )
+            )
+          ],
+        ),
+      ),
+      Container(
+        padding: const EdgeInsets.only(top: 15),
+        decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.orangeAccent, width: 3,
+            ),
+            //color: Colors.white38,
+            borderRadius: BorderRadius.circular(70)
+        ),
+        child: const Stack(
+          children: [
+            Positioned(
+              top:0,
+              left: 45,
+              child: Image(
+                image: AssetImage("assets/images/coffe.png"),
+                height: 100,
+              ),
+            ),
+            Positioned(
+                top: 80,
+                left: 50,
+                child: Column(
+                  children: [
+                    Text("Cappucino", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
+                    Text("Café délicieux")
+                  ],
+                )
+            ),
+            Positioned(
+                bottom: -10,
+                left: 75,
+                child: IconButton(
+                    style: ButtonStyle(
+                        backgroundColor: WidgetStatePropertyAll(Colors.orangeAccent)
+                    ),
+                    onPressed: null,
+                    icon: Icon(Icons.add, size: 35,color: Colors.white,)
+                )
+            )
+          ],
+        ),
+      ),
+      Container(
+        padding: const EdgeInsets.only(top: 15),
+        decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.orangeAccent, width: 3,
+            ),
+            //color: Colors.white38,
+            borderRadius: BorderRadius.circular(70)
+        ),
+        child: const Stack(
+          children: [
+            Positioned(
+              top:0,
+              left: 45,
+              child: Image(
+                image: AssetImage("assets/images/coffe.png"),
+                height: 100,
+              ),
+            ),
+            Positioned(
+                top: 80,
+                left: 50,
+                child: Column(
+                  children: [
+                    Text("Cappucino", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
+                    Text("Café délicieux")
+                  ],
+                )
+            ),
+            Positioned(
+                bottom: -10,
+                left: 75,
+                child: IconButton(
+                    style: ButtonStyle(
+                        backgroundColor: WidgetStatePropertyAll(Colors.orangeAccent)
                     ),
                     onPressed: null,
                     icon: Icon(Icons.add, size: 35,color: Colors.white,)
@@ -346,9 +432,4 @@ Widget menuPriceSection = Container(
       ),
     ],
   ),
-);
-Widget dividerSection = const Divider(
-  height: 50,
-  color: Colors.red,
-  thickness: 40,
 );
